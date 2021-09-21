@@ -16,7 +16,7 @@ export default function useOutputs() {
       method: "get",
       withCredentials: true,
       data: { key: values.key, onEdit: values.onEdit },
-      url: "http://localhost:9000/record",
+      url: "https://langtransapi.herokuapp.com/record",
     }).then((resp) => {
       setvalues({ ...values, fetched: resp.data }); //
       console.log(resp.data);
