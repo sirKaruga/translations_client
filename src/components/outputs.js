@@ -37,7 +37,7 @@ export default function useOutputs() {
       <div style={{ marginLeft: "4em" }}>
         {values.fetched.map((item) => (
           <span key={item.key}>
-            "{item.key}"{"=>"}"{item.English}",
+            "{item.key}"{"=>"}"{item.French}",
             <br />
           </span>
         ))}
