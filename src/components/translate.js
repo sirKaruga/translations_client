@@ -18,7 +18,7 @@ export default function useTranslate(props) {
       method: "get",
       withCredentials: true,
       data: { key: values.key, onEdit: values.onEdit },
-      url: "https://langtransapi.herokuapp.com/record",
+      url: "http://langtransapi.herokuapp.com/record",
     }).then((resp) => {
       setvalues({ ...values, fetched: resp.data, onEdit: "" }); //
     });
@@ -33,7 +33,7 @@ export default function useTranslate(props) {
       method: "post",
       withCredentials: true,
       data: { key: values.id, language: Language, onEdit: values.onEdit },
-      url: "https://langtransapi.herokuapp.com/save",
+      url: "http://langtransapi.herokuapp.com/save",
     }).then((resp) => {
       setvalues({ ...values, fetched: resp.data, onEdit: "", id: "" }); //
     });
