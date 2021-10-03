@@ -17,7 +17,7 @@ export default function useAddItems() {
       method: "get",
       withCredentials: true,
       data: { key: values.key, onEdit: values.onEdit },
-      url: "http://langtransapi.herokuapp.com/record",
+      url: "https://langtransapi.herokuapp.com/record",
     }).then((resp) => {
       setvalues({ ...values, fetched: resp.data, onEdit: "" }); //
       console.log(values);
@@ -32,7 +32,7 @@ export default function useAddItems() {
         method: "post",
         withCredentials: true,
         data: { key: values.key, onEdit: values.onEdit },
-        url: "http://langtransapi.herokuapp.com/record",
+        url: "https://langtransapi.herokuapp.com/record",
       }).then((resp) => {
         setvalues({ ...values, fetched: resp.data, onEdit: "" }); //
         getter(); // update the state to force render
